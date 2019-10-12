@@ -1,0 +1,30 @@
+<launch>
+  <arg name="base"       default="$(optenv TURTLEBOT_BASE kobuki)"/>  <!-- create, rhoomba -->
+  <arg name="stacks"     default="$(optenv TURTLEBOT_STACKS hexagons)"/>  <!-- circles, hexagons -->
+  <arg name="3d_sensor"  default="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  <!-- kinect, asus_xtion_pro -->
+
+<!--   <group ns="robot_0">
+  <include file="$(find rrt_exploration_tutorials)/launch/includes/move_baseSafe.launch">
+    <arg name="robot_name" value="robot_0"/>
+  </include>
+  </group> -->
+
+  <group ns="robot_1">
+  <include file="$(find rrt_exploration_tutorials)/launch/includes/move_baseSafe.launch">
+    <arg name="robot_name" value="robot_1"/>
+  </include>
+  </group>
+
+<!--   <group ns="robot_2">
+  <include file="$(find rrt_exploration_tutorials)/launch/includes/move_baseSafe.launch">
+    <arg name="robot_name" value="robot_2"/>
+  </include>
+  </group> -->
+
+<!--   <group ns="robot_3">
+  <include file="$(find rrt_exploration_tutorials)/launch/includes/move_baseSafe.launch">
+    <arg name="robot_name" value="robot_3"/>
+  </include>
+  </group>
+ -->
+</launch>
