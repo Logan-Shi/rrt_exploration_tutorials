@@ -26,6 +26,40 @@ sudo apt-get install ros-kinetic-kobuki-gazebo
 Download the package and place it inside the ```/src``` folder in your workspace. And then compile using ```catkin_make```.
 
 ## 3. Example
+
+### single exploration using gazebo as simulator
+
 ```sh
-roslaunch rrt_exploration_tutorials single_simulated_house.launch
+roslaunch rrt_exploration_tutorials single_simulated_irobotcreate.launch
 ```
+
+works fine, do not alter
+
+### single exploration using stage as simulator
+
+```sh
+roslaunh rrt_exploration_tutorials single_stage_irobot.launch
+```
+
+current issue: move_base can't access tf from base_link_laser to map
+
+### three bots exploration using gazebo as simulator
+
+```sh
+mutliple_simulated_house.launch
+```
+
+current issue:   
+1. map merger works strange, may need to set up init pose  
+2. takes up too much cpu resource
+
+### three bots exploration using stage as simulator
+
+```sh
+multi_robot.launch
+```
+
+current issue:  
+1. map merger too slow, need to set up init pose  
+2. same issue as single simulator, move_base can't access tf
+
