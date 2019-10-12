@@ -65,5 +65,4 @@ multi_robot.launch
 
 current issue:  
 1. map merger too slow, need to set up init pose  
-2. same issue as single simulator, move_base can't access tf
 
