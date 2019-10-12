@@ -43,6 +43,10 @@ roslaunh rrt_exploration_tutorials single_stage_irobot.launch
 
 current issue: move_base can't access tf from base_link_laser to map
 
+tf.timestamp error: slam_gmapping using real-time while stage publish sim time
+
+add "use_sim_time = true" in the launch file
+
 ### three bots exploration using gazebo as simulator
 
 ```sh

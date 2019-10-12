@@ -1,6 +1,9 @@
 <!--  Spawn single robot on Gazebo -->
 <launch>
 <!--env name="GAZEBO_RESOURCE_PATH" value="$(find rrt_exploration_tutorials)/launch/includes/meshes"/-->
+
+	<param name="use_sim_time" value="true" />
+	
 	<arg name="world_file"     default=" $(find teb_local_planner_tutorials)/stage/maze_multi_robot.world"/>
 
 <!-- 	<param name="/use_sim_time" value="true"/>
