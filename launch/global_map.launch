@@ -1,7 +1,7 @@
 <launch>
 
     <!-- Set to your sensor's range -->
-    <arg name="sensor_range" default="1.0"/>
+    <arg name="sensor_range" default="25.0"/>
 
     <node pkg="frontier_exploration" type="explore_client" name="explore_client" output="screen"/>
 
@@ -14,7 +14,7 @@
         <rosparam ns="explore_costmap" subst_value="true">
             footprint: [[-0.127, -0.127], [-0.18, 0.0], [-0.127, 0.127], [0.0, 0.18], [0.127, 0.127], [0.18, 0.0], [0.127, -0.127], [0.0, -0.18]]
 
-            robot_radius: 0.10
+            robot_radius: 0.30
 
             transform_tolerance: 0.5
             update_frequency: 5.0

@@ -3,7 +3,7 @@
 
 <launch>
 	<!-- <arg name="map_file"       default=" $(find multi_robot_stage)/maps/three_rooms.yaml"/> --> <!-- robopark_plan -->
-	<arg name="world_file"     default=" $(find teb_local_planner_tutorials)/stage/maze_multi_robot.world"/>
+	<arg name="world_file"     default=" $(find teb_local_planner_tutorials)/stage/obstacle.world"/>
 
     <param name="/use_sim_time" value="true"/>
 <!-- 	<param name="/use_sim_time" value="true"/>
@@ -17,8 +17,8 @@
 	<include file="$(find rrt_exploration_tutorials)/launch/robot_model.launch"/>
 
 	<!-- transformation between robots-->
-	<node pkg="tf" type="static_transform_publisher" name="robot1_to_robot0" args="0 0.5 0 0 0 0 /robot_0/map /robot_1/map 20" />
-	<node pkg="tf" type="static_transform_publisher" name="robot2_to_robot0" args="0 1 0 0 0 0 /robot_0/map /robot_2/map 20" />
+	<node pkg="tf" type="static_transform_publisher" name="robot1_to_robot0" args="0 1.5 0 0 0 0 /robot_0/map /robot_1/map 20" />
+	<!-- <node pkg="tf" type="static_transform_publisher" name="robot2_to_robot0" args="0 1 0 0 0 0 /robot_0/map /robot_2/map 20" /> -->
 <!-- 	<node pkg="tf" type="static_transform_publisher" name="robot3_to_robot0" args="0 1.5 0 0 0 0 /robot_0/map /robot_3/map 20" /> -->
 
 	<!-- Map megring (know inital position case)-->
