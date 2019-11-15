@@ -4,7 +4,7 @@
 
 	<param name="use_sim_time" value="true" />
 	
-	<arg name="world_file"     default=" $(find teb_local_planner_tutorials)/stage/obstacle.world"/>
+	<arg name="world_file"     default=" $(find teb_local_planner_tutorials)/stage/small_obstacle.world"/>
 
 <!-- 	<param name="/use_sim_time" value="true"/>
   
