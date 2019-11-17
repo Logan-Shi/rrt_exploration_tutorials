@@ -6,12 +6,12 @@
 
 <param name="use_sim_time" value="true" />
 
-    <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping">
+    <!-- <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping">
       <remap from="scan" to="base_scan"/>
       <param name="map_frame" value="$(arg robot_name)/map"/>
       <param name="odom_frame" value="$(arg robot_name)/odom"/>
       <param name="base_frame" value="$(arg robot_name)/base_link"/>
-      <param name="map_update_interval" value="2.0"/>
+      <param name="map_update_interval" value="0.5"/>
       <param name="maxUrange" value="50.0"/>
       <param name="maxRange" value="50.0"/>
       <param name="sigma" value="0.05"/>
@@ -35,21 +35,21 @@
       <param name="ymin" value="-5.0"/>
       <param name="xmax" value="5.0"/>
       <param name="ymax" value="5.0"/>
-      <param name="delta" value="0.1"/>
+      <param name="delta" value="0.05"/>
       <param name="llsamplerange" value="0.01"/>
       <param name="llsamplestep" value="0.01"/>
       <param name="lasamplerange" value="0.005"/>
       <param name="lasamplestep" value="0.005"/>
       <param name="minimumScore" value="0.005"/>
     </node>
-
-<!--   <node name="cartographer_node" pkg="cartographer_ros"
+ -->
+  <node name="cartographer_node" pkg="cartographer_ros"
         type="cartographer_node" args="
           -configuration_directory $(find cartographer_ros)/configuration_files
           -configuration_basename $(arg robot_name)_backpack_2d.lua"
       output="screen">
     <remap from="scan" to="/$(arg robot_name)/base_scan" />
-  </node> -->
+  </node>
 
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base_node" output="screen">
