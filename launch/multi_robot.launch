@@ -3,7 +3,7 @@
 
 <launch>
 	<!-- <arg name="map_file"       default=" $(find multi_robot_stage)/maps/three_rooms.yaml"/> --> <!-- robopark_plan -->
-	<arg name="world_file"     default=" $(find teb_local_planner_tutorials)/stage/obstacle.world"/>
+	<arg name="world_file"     default=" $(find teb_local_planner_tutorials)/stage/hospital.world"/>
 
     <param name="/use_sim_time" value="true"/>
 <!-- 	<param name="/use_sim_time" value="true"/>
