@@ -6,7 +6,7 @@
 
 <param name="use_sim_time" value="true" />
 
-<!--     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping">
+    <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping">
       <remap from="scan" to="base_scan"/>
       <param name="map_frame" value="$(arg robot_name)/map"/>
       <param name="odom_frame" value="$(arg robot_name)/odom"/>
@@ -42,17 +42,18 @@
       <param name="lasamplestep" value="0.005"/>
       <param name="minimumScore" value="0.005"/>
     </node>
- -->
-  <node name="cartographer_node" pkg="cartographer_ros"
+
+<!--   <node name="cartographer_node" pkg="cartographer_ros"
         type="cartographer_node" args="
           -configuration_directory $(find cartographer_ros)/configuration_files
           -configuration_basename $(arg robot_name)_backpack_2d.lua"
       output="screen">
     <remap from="scan" to="/$(arg robot_name)/base_scan" />
-  </node>
+  </node> -->
 
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base_node" output="screen">
+    <!-- <remap from="/robot_1/cmd_vel" to= "/cmd_vel"/> -->
     <param name="footprint_padding" value="0.01" />
     <param name="controller_frequency" value="5.0" />
     <param name="controller_patience" value="3.0" />
